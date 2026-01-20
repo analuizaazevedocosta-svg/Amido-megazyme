@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>LC0001 – Determinação de Amido via Kit Megazyme</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#b8d1cf;
+  --card:#cfe3df;
+  --title:#334155;
+  --text:#475569;
+  --accent:#f5e6a8;
+  --line:#94a3b8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size:40px 40px;
+  background-color:var(--bg);
+  color:var(--text);
+}
+header{
+  padding:40px 20px 20px;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:36px;
+  color:#fef3c7;
+}
+header h2{
+  margin-top:8px;
+  font-weight:400;
+  color:var(--title);
+}
+.progress{
+  height:8px;
+  background:#d1d5db;
+}
+.progress-bar{
+  height:8px;
+  width:0%;
+  background:linear-gradient(90deg,#6366f1,#38bdf8);
+  transition:.4s;
+}
+.container{
+  max-width:1100px;
+  margin:50px auto;
+  padding:20px;
+}
+.card{
+  background:var(--card);
+  border:3px solid var(--line);
+  padding:40px;
+  min-height:360px;
+  display:none;
+}
+.card.active{
+  display:block;
+  animation:fade .4s ease;
+}
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:none}
+}
+.badge{
+  background:var(--accent);
+  display:inline-block;
+  padding:6px 16px;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:20px;
+}
+h3{
+  color:var(--title);
+  font-size:22px;
+}
+p, li{
+  line-height:1.8;
+  font-size:14px;
+}
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-top:30px;
+}
+button{
+  border:none;
+  padding:12px 30px;
+  font-size:14px;
+  cursor:pointer;
+  background:#e5e7eb;
+}
+.next{
+  background:#4f46e5;
+  color:white;
+}
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+  color:#334155;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>LC0001</h1>
+  <h2>Procedimento – Determinação de Amido via Kit Megazyme</h2>
+</header>
+
+<div class="progress">
+  <div class="progress-bar" id="bar"></div>
+</div>
+
+<div class="container">
+
+<div class="card active">
+  <div class="badge">IDENTIFICAÇÃO</div>
+  <h3>LC0001 - PROCEDIMENTO DETERMINAÇÃO DE AMIDO VIA KIT MEGAZYME</h3>
+  <p>Determinar o teor de amido via Kit Megazyme.</p>
+  <p>Versão 10.0.0</p>
+  <p>Publicado: 08/09/2025</p>
+  <p>Vencimento: 08/09/2028</p>
+</div>
+
+<div class="card">
+  <div class="badge">ESCOPO</div>
+  <p>
+    O método é aplicável para produtos das fábricas de milho (Feed Products – fibra e gérmen)
+    e da fábrica do Wet Feed.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">DEFINIÇÕES E ABREVIAÇÕES</div>
+  <p>FISPQ – é um documento que contém informações sobre a segurança, saúde, proteção e meio ambiente de um produto químico.</p>
+  <p>GOPOD – reagente para determinação de glucose.</p>
+  <p>MOPS – 3-Morfolinopropano-1-ácido sulfônico.</p>
+</div>
+
+<div class="card">
+  <div class="badge">PRINCÍPIOS</div>
+  <p>
+    O amido é encontrado em diversos alimentos como cereais, legumes, frutas e raízes vegetais,
+    sendo a maior fonte de energia na dieta humana.
+  </p>
+  <p>
+    O método de análise de amido em alimentos utilizando o kit de amido Megazyme inicia utilizando
+    a alpha-amilase para catalisar a reação de hidrólise do amido em maltodextrinas.
+  </p>
+  <p>
+    Como existem amidos resistentes a esta reação, utiliza-se a solução de hidróxido de potássio (KOH)
+    2,0 mol/L ou DMSO à 100 °C ± 6 °C para dissolvê-los e hidrolisá-los em maltodextrinas.
+  </p>
+  <p>
+    Em seguida, acontece a reação de hidrólise das maltodextrinas à D-glucose, com a ajuda da enzima
+    amiloglucosidase.
+  </p>
+  <p>
+    A D-glucose é, então, oxidada a D-gluconato e acontece a liberação de peróxido de hidrogênio,
+    que é medido quantitativamente através da reação colorimétrica com peroxidase,
+    produzindo corante quinoneimina, que é lido no espectrofotômetro UV/VIS.
+  </p>
+</div>
+<div class="card">
+  <div class="badge">RESPONSABILIDADES</div>
+  <p>
+    Analista de laboratório: realizar a análise conforme este procedimento. Comunicar quando houver
+    qualquer problema técnico com o equipamento, informar consumo de materiais, zelar pela integridade,
+    funcionalidade e limpeza adequada das peças.
+  </p>
+  <p>
+    Supervisor do laboratório: Garantir que os analistas estejam treinados de acordo com esse procedimento.
+    Garantir que as análises sejam realizadas de acordo com esse procedimento. Comunicar os interessados
+    em caso de resultados fora do esperado.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">EPIs / SEGURANÇA</div>
+  <p>
+    Para a realização da análise, deve-se utilizar: Óculos de proteção, Jaleco, Luva nitrílicas, Botina de proteção.
+  </p>
+  <p>
+    Uma parte da análise ocorre em banho com temperatura de 100 °C ± 6 °C, portanto, deve-se tomar cuidado
+    com queimaduras durante o manuseio dos tubos de ensaio.
+  </p>
+  <p>
+    Ao manusear as vidrarias durante o tempo de incubação, quando a amostra é colocada em banho térmico
+    à 100 °C e 50 °C, usar luvas térmicas.
+  </p>
+  <p>
+    Verificar os riscos inerentes aos reagentes descritos na FISPQ ou no site do fornecedor.
+  </p>
+  <p>
+    Risco potencial e reconhecimento: O reagente GOPOD contém azida sódica. Luvas de nitrila devem ser
+    usadas ao fazer o reagente e durante e após a etapa de adição neste procedimento.
+  </p>
+  <p>
+    Ao fim do procedimento, fazer separação adequada dos resíduos para posterior gerenciamento. Isso deve
+    ser feito, principalmente, pela presença de azida sódica – presente no frasco 4 do kit de Megazyme –
+    que tem poder herbicida, sendo prejudicial ao meio ambiente.
+  </p>
+  <p>
+    Ao utilizar a centrifuga, garanta que ela esteja balanceada, ou seja, pesos similares em posições opostas
+    dentro dela. Utilizar a centrifuga desbalanceada pode estragar o rotor e machucar pessoas ao redor.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">EQUIPAMENTOS</div>
+  <ul>
+    <li>Balança analítica com precisão de 0,1000 gr.</li>
+    <li>Espectrofotômetro UV-VIS, operando a 510 nm.</li>
+    <li>Banho maria capaz de atingir e manter 50 °C ± 5 °C.</li>
+    <li>Banho maria capaz de atingir e manter 100 °C ± 6 °C.</li>
+    <li>Centrifuga capaz de atingir 3000 rpm com suporte para tubo Falcon de 15 mL.</li>
+    <li>Moinho Tecnal 650/1.</li>
+    <li>Moinho ZM200 com peneira de 0,5 mm.</li>
+    <li>Agitador com barra magnética.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="badge">KIT MEGAZYME</div>
+  <p>Kit Megazyme (K-TSTA), composto por:</p>
+  <ul>
+    <li>Frasco 1: Alpha-amilase termoestável (10 mL). NOTA: deve ser armazenado a 4 °C ou abaixo de -10 °C.</li>
+    <li>Frasco 2: Amiloglucosidase (10 mL, 3.300 U/mL). NOTA: deve ser armazenado a 4 °C ou abaixo de -10 °C.</li>
+    <li>Frasco 3: GOPOD reagente tampão (50 mL). NOTA: deve ser armazenado a 4 °C.</li>
+    <li>Frasco 4: GOPOD enzima (50 mL). NOTA: deve ser armazenado a -10 °C ou abaixo.</li>
+    <li>Frasco 5: D-glucose solução padrão (5 mL, 1 mg/mL). NOTA: armazenar selado à temperatura ambiente.</li>
+    <li>Frasco 6: Padrão de amido. NOTA: armazenar selado à temperatura ambiente.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="badge">REAGENTES ADICIONAIS</div>
+  <ul>
+    <li>Ácido acético glacial.</li>
+    <li>Cloreto de cálcio dihidratado.</li>
+    <li>Solução de hidróxido de sódio 0,1 mol/L.</li>
+    <li>3-Morfolinopropano-1-ácido sulfônico (MOPS).</li>
+    <li>Álcool etílico (95%).</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="badge">MATERIAIS</div>
+  <ul>
+    <li>Tubos de ensaio (16 x 120 mm).</li>
+    <li>Estante para tubos de ensaio.</li>
+    <li>Re-pipetador com ponteira de 5 e 50 mL.</li>
+    <li>Pipetador capaz de dispensar 100 µL (0,1 mL).</li>
+    <li>Tubos de centrifuga de, pelo menos, 15 mL com graduação.</li>
+    <li>Balão volumétrico 1000 mL, calibrado e verificado.</li>
+    <li>Balão volumétrico 100 mL, calibrado e verificado.</li>
+    <li>Proveta graduada 100 mL.</li>
+    <li>Becker 1000 mL.</li>
+    <li>Copo descartável de 200 mL.</li>
+    <li>Cubeta de quartzo de 1 cm.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="badge">PREPARO DE SOLUÇÕES</div>
+  <h3>Solução tampão de acetato de sódio (200 mM, pH 4,5)</h3>
+  <p>
+    Passo 1: Em um Becker de 1 L adicionar com o auxílio de uma proveta adicionar 800 mL de água ultrapura,
+    posteriormente com um pipetador 11,6 mL de ácido acético glacial.
+  </p>
+  <p>
+    Passo 2: Ajustar o pH para 4,5 utilizando solução de hidróxido de sódio (NaOH) 1 mol/L
+    (gasta-se, aproximadamente, 60 mL de solução para a correção do pH).
+  </p>
+  <p>
+    Passo 3: Transferir o conteúdo do béquer para um Balão Volumétrico 1000 mL e ajustar o volume da solução
+    completando o balão com água ultrapura.
+  </p>
+  <p>
+    Nota: Para essa solução seguir validade de 2 meses após o preparo.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">GOPOD</div>
+  <h3>Solução para determinação de glucose (GOPOD)</h3>
+  <p>
+    Passo 1: Diluir o conteúdo do frasco 3 do Kit Megazyme em um Balão Volumétrico de 1000 mL,
+    completar com água ultrapura e homogeneizar bem.
+  </p>
+  <p>
+    Passo 2: Retirar uma quantidade dessa solução (Passo 1) em um Becker de 100 mL e com uma pipeta Pasteur
+    usar para diluir o frasco 4, lavar o frasco 4 até que não fique nenhum resíduo dentro dele.
+    Em seguida, retornar essa diluição para o frasco do item anterior (Passo 1).
+  </p>
+  <p>
+    Passo 3: Armazenar a solução final em um frasco envolvido com papel alumínio, impedindo entrada de luz.
+  </p>
+  <p>
+    Nota: Para essa solução seguir validade de 2 meses após o preparo. Essa solução sofre oxidação com o tempo,
+    visualizar sempre a coloração dessa para que se for necessário seja feito um novo preparo antes do intervalo
+    de 2 meses.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">OUTRAS SOLUÇÕES</div>
+  <h3>Solução tampão MOPS</h3>
+  <p>
+    Passo 1: Em um Becker de 1000 mL, dissolver 11,5 g do MOPS em 800 mL de água ultrapura.
+  </p>
+  <p>
+    Passo 2: Ajustar o pH para 7 adicionando a solução de hidróxido de sódio (NaOH) 1 mol/L
+    (gasta-se, aproximadamente, 17 mL de solução para a correção do pH).
+  </p>
+  <p>
+    Passo 3: Adicionar 0,74 g de cloreto de cálcio di-hidratado (CaCl₂ x 2 H₂O).
+  </p>
+  <p>
+    Passo 4: Em um Balão volumétrico 1000 mL ajustar o volume da solução até 1 L.
+  </p>
+  <p>
+    Nota: Para essa solução seguir validade de 2 meses após o preparo.
+  </p>
+
+  <h3>Solução de álcool etílico 80%</h3>
+  <p>
+    Com auxílio de uma proveta, adicione 85 mL de álcool etílico 95% a um frasco volumétrico de 100 mL
+    e complete-o com água ultrapura.
+  </p>
+  <p>
+    Nota: Para essa solução seguir validade de 2 meses após o preparo.
+  </p>
+
+  <h3>Solução de alpha-amilase</h3>
+  <p>
+    Adicione 1 mL do conteúdo do frasco 1 do Kit Megazyme com 29 mL do tampão MOPS.
+  </p>
+  <p>
+    Nota: Para essa solução o preparo deve ser feito na hora da realização da análise.
+  </p>
+  <p>
+    Nota: Todas as soluções preparadas devem ser registradas no formulário LC0003REG - Preparo de soluções.
+  </p>
+</div>
+<div class="card">
+  <div class="badge">PREPARO DE AMOSTRAS</div>
+  <p>
+    O preparo de amostras é realizado a fim de eliminar compostos que possam interferir na determinação
+    do amido. Outro ponto importante do preparo de amostras é a moagem, realizada para aumentar a
+    superfície de contato entre os analitos e os reagentes.
+  </p>
+
+  <h3>Matriz Gérmen</h3>
+  <p>
+    Realizar a extração da amostra através do moinho extrator Spex Mixer/Mill conforme procedimento
+    LC0020 - Extração de Óleo Spex Mixer Mill – a mesma utilizada para análise quantitativa de teor de óleo
+    em produtos e subprodutos do processamento de milho e materiais do Wet Feed.
+  </p>
+  <p>
+    Nota: A análise de óleo deve ser conduzida normalmente, pois o resultado de óleo (%) será utilizado
+    no cálculo final do amido.
+  </p>
+  <p>
+    Após a extração, deixar a matriz sólida extraída secar em estufa de ar forçado a 60 °C de um dia para
+    o outro (10 horas mais ou menos) e armazenar em dessecador até o momento da análise de amido.
+  </p>
+  <p>
+    Nota: Cálculos adicionais são necessários para determinar a % de amido; consulte a seção Cálculos
+    para obter orientação.
+  </p>
+
+  <h3>Matriz Fibra</h3>
+  <p>
+    Moer as amostras utilizando o moinho Retsch ZM200 com peneira de 0,5 mm.
+  </p>
+
+  <h3>Matrizes de Wet Feed</h3>
+  <p>
+    Realizar a moagem em moinho Tecnal 650/1, em seguida moer as amostras utilizando o moinho Retsch
+    ZM200 com peneira de 0,5 mm.
+  </p>
+  <p>
+    Observação: Procedimento de preparo de amostras seguir conforme documento LC0013.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">EXECUÇÃO DA ANÁLISE</div>
+  <p>
+    Devem ser analisados 2 padrões junto com as amostras em cada batelada. Este padrão de amido é
+    fornecido no kit Megazyme, sendo o item 6 do kit.
+  </p>
+  <p>
+    Em toda batelada analisar uma das amostras em duplicatas.
+  </p>
+  <p>
+    Antes de iniciar a análise, prepare os tubos de centrifuga e as tampas para acomodar todas as
+    amostras e a duplicata do padrão.
+  </p>
+  <p>
+    Pese com precisão 0,1000 ± 0,0005 g de amostra (mesma massa para os padrões) em um tubo de vidro
+    com tampa. Bata o tubo para garantir que toda a amostra caia no fundo dele e coloque ele no rack
+    de tubos. Tubos para os brancos e controles serão utilizados apenas posteriormente.
+  </p>
+  <p>
+    Utilizando o re-pipetador com ponteira de 5 mL, adicionar 300 µL (0,3 mL) de solução de álcool
+    etílico 80% aos tubos. Em seguida, tampar e agitar por meio de agitador de tubos (3 – 5 segundos).
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">α-AMILASE</div>
+  <p>
+    Adicionar 3 mL da solução de alpha-amilase em cada tubo utilizando o re-pipetador com ponteira de
+    50 mL. Em seguida, tampar e agitar os tubos novamente em vórtex por 3 a 5 segundos.
+  </p>
+  <p>
+    Colocar os tubos em banho-maria a 100 °C ± 6 °C. O tempo total será de 15 minutos, mas inicie com
+    um timer de 5 minutos.
+  </p>
+  <p>
+    Após decorridos os 5 minutos, abrir os tubos para aliviar a pressão, tampar novamente e agitar em
+    vórtex de 3 a 5 segundos.
+  </p>
+  <p>
+    Uma vez que todas as amostras já tenham sido agitadas e colocadas de volta no rack, retornar ao
+    banho de 100 °C ± 6 °C.
+  </p>
+  <p>
+    Iniciar um novo timer de 5 minutos e refazer o processo de alívio de pressão e agitação.
+  </p>
+  <p>
+    Voltar ao banho e deixar por mais 5 minutos, totalizando os 15 minutos de incubação.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">AMILOGLUCOSIDASE</div>
+  <p>
+    Retire o rack do banho de 100 °C ± 6 °C e destampe todos os tubos para tornar mais eficiente as
+    adições.
+  </p>
+  <p>
+    Adicionar 4 mL do tampão acetato de sódio utilizando o re-pipetador com ponteira de 50 mL.
+  </p>
+  <p>
+    Adicionar em seguida 100 µL (0,1 mL) de amiloglucosidase utilizando o re-pipetador com ponteira de
+    5 mL. Descartar a primeira porção da amiloglucosidase e seguir com a adição nos tubos.
+  </p>
+  <p>
+    Tampar os tubos e agitar em vórtex de 3 a 5 segundos, garantindo que todas as amostras se
+    mantenham suspensas durante a agitação.
+  </p>
+  <p>
+    Transferir o rack com os tubos para um banho de 50 °C ± 5 °C. O tempo total de incubação será de
+    30 minutos.
+  </p>
+  <p>
+    Ao atingir 15 minutos, abrir os tubos para alívio de pressão e agitá-los em vórtex de 3 a 5
+    segundos, garantindo que toda a amostra seja ressuspendida.
+  </p>
+  <p>
+    Decorridos os 30 minutos, retirar os tubos do banho-maria.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">DILUIÇÃO / GOPOD / LEITURA</div>
+  <p>
+    Transferir os conteúdos dos tubos para Balões volumétricos de 100 mL. Rinsar bem os tubos de vidro
+    e as tampas para garantir que não haja perda de amostra.
+  </p>
+  <p>
+    Completar o Balão volumétrico com água ultrapura até o menisco da forma mais exata possível, fechar
+    e homogeneizar por inversão.
+  </p>
+  <p>
+    Transferir o conteúdo do Balão volumétrico para um copo descartável de no mínimo 200 mL identificado
+    com número da amostra.
+  </p>
+  <p>
+    Dessa amostra do copo transfira uma alíquota de 12 mL para um tubo de centrifuga utilizando a marca
+    de graduação do tubo.
+  </p>
+  <p>
+    Coloque os tubos em centrifuga e centrifugue a 3000 rpm por 10 minutos.
+  </p>
+  <p>
+    Após a centrifugação, retirar uma alíquota de 100 µL (0,1 mL) do sobrenadante e adicionar aos tubos
+    de ensaio respectivos de cada amostra.
+  </p>
+  <p>
+    Adicionar 3 mL da solução de determinação de glucose (GOPOD) em cada tubo e incubar em banho-maria
+    a 50 °C ± 5 °C por 25 minutos.
+  </p>
+  <p>
+    Ligar o espectrofotômetro UV-VIS e configurar para leitura a 510 nm. Realizar Auto-Zero com os
+    brancos e proceder com a leitura das amostras.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">CÁLCULOS</div>
+  <p>
+    Os cálculos podem ser executados pela planilha Mega-Calc presente em www.megazyme.com.
+  </p>
+  <p>
+    Os cálculos são fornecidos abaixo para consulta conforme imagens do procedimento.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">GARANTIA DA VALIDADE</div>
+  <p>
+    Verificação da temperatura: verificar a temperatura dos banhos maria com o auxílio de um termômetro
+    calibrado e ajustar a mesma, quando aplicável. Anotar a temperatura medida.
+  </p>
+  <p>
+    Verificação do tempo: verificar o tempo em que os tubos de ensaio permanecem nos banhos maria
+    conforme recomendação do procedimento.
+  </p>
+  <p>
+    A validade dos resultados deve ser verificada através da amostra referência.
+  </p>
+</div>
+
+<div class="card">
+  <div class="badge">REFERÊNCIAS</div>
+  <p>Megazyme Total Starch Assay Procedure K-TSTA, AOAC Method 996.11.</p>
+  <p>AOAC Method 996.11 - Starch (Total) in Cereal Products.</p>
+  <p>AACC Method 76-13.01 - Total Starch Assay Procedure.</p>
+</div>
+
+<div class="controls">
+  <button onclick="prev()">⬅ Anterior</button>
+  <button class="next" onclick="next()">Próximo ➡</button>
+</div>
+
+</div>
+
+<footer>
+  Propriedade da informação: Cargill Agrícola S.A. • Cópia não controlada
+</footer>
+
+<script>
+let step = 0;
+const cards = document.querySelectorAll('.card');
+const bar = document.getElementById('bar');
+
+function update(){
+  cards.forEach(c=>c.classList.remove('active'));
+  cards[step].classList.add('active');
+  bar.style.width = ((step+1)/cards.length)*100 + '%';
+}
+
+function next(){ if(step < cards.length-1){ step++; update(); } }
+function prev(){ if(step > 0){ step--; update(); } }
+</script>
+
+</body>
+</html>
